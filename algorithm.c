@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalegria <aalegria@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:55:01 by aalegria          #+#    #+#             */
-/*   Updated: 2024/11/22 15:55:39 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:16:35 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 static int	get_max_bits(t_stack *a)
 {
@@ -32,7 +31,6 @@ static int	get_max_bits(t_stack *a)
 		bits++;
 	return (bits);
 }
-
 
 static void	sort_bit(t_stack *a, t_stack *b, int bit)
 {

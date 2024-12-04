@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:53:58 by aalegria          #+#    #+#             */
-/*   Updated: 2024/11/26 12:19:56 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:10:56 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	parse_args(int argc, char **argv, t_stack *a)
 	a->size = argc - 1;
 	return (1);
 }
-
 
 void	handle_error(void)
 {

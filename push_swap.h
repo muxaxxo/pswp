@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:54:25 by aalegria          #+#    #+#             */
-/*   Updated: 2024/11/26 12:27:53 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:17:35 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "libft/libft.h"
 # include <stdlib.h>
 # include <unistd.h>
+# include "ft_printf/ft_printf.h"
 
 typedef struct s_stack
 {
