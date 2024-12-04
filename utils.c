@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 13:41:03 by aalegria          #+#    #+#             */
-/*   Updated: 2024/11/26 13:46:10 by aalegria         ###   ########.fr       */
+/*   Created: 2024/11/26 12:41:59 by aalegria          #+#    #+#             */
+/*   Updated: 2024/11/26 15:05:55 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	is_sorted(t_stack *a)
 {
-	t_stack	a;
-	t_stack	b;
+	int	i;
 
-	b.values = NULL;
-	b.size = 0;
-	if (argc < 2)
-		return (0);
-
-	if (!parse_args(argc, argv, &a))
-		return (0);
-	b.values = malloc(sizeof(int) * a.size);
-	if (!b.values)
-		handle_error();
-
-	if (is_sorted(&a))
+	if (a->size <= 0)
+		return (1);
+	i = 0;
+	while (i < a->size - 1)
 	{
-		free_stack(&a);
-		free_stack(&b);
-		return (0);
+		if (a->values[i] > a->values[i + 1])
+			return (0);
+		i++;
 	}
-	push_swap(&a, &b);
-	free_stack(&a);
-	free_stack(&b);
+	return (1);
+}
 
-	return (0);
+void	free_stack(t_stack *stack)
+{
+	if (stack->values)
+	{
+		free(stack->values);
+		stack->values = NULL;
+	}
+	stack->size = 0;
 }

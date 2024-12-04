@@ -1,20 +1,30 @@
 NAME = push_swap
+LIB = libft.a
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.c operations.c sorting.c utils.c
-OBJS = $(SRCS:.c=.o)
+SRC = main.c operations.c algorithm.c errors.c rever_rotate.c \
+		rotate.c utils.c
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+$(NAME): $(OBJ) $(LIB)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB)
+
+$(LIB):
+	make -C libft
+	cp libft/libft.a .
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
+	make -C libft clean
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(LIB)
+	make -C libft fclean
 
 re: fclean all
-.PHONY: re fclean clean all
+
+.PHONY: all clean fclean re

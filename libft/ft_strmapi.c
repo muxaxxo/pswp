@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 13:41:03 by aalegria          #+#    #+#             */
-/*   Updated: 2024/11/26 13:46:10 by aalegria         ###   ########.fr       */
+/*   Created: 2024/10/04 12:51:58 by aalegria          #+#    #+#             */
+/*   Updated: 2024/10/04 12:53:02 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	t_stack	a;
-	t_stack	b;
+	char			*result;
+	unsigned int	i;
 
-	b.values = NULL;
-	b.size = 0;
-	if (argc < 2)
-		return (0);
-
-	if (!parse_args(argc, argv, &a))
-		return (0);
-	b.values = malloc(sizeof(int) * a.size);
-	if (!b.values)
-		handle_error();
-
-	if (is_sorted(&a))
+	if (!s || !f)
+		return (NULL);
+	result = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
 	{
-		free_stack(&a);
-		free_stack(&b);
-		return (0);
+		result[i] = f(i, s[i]);
+		i++;
 	}
-	push_swap(&a, &b);
-	free_stack(&a);
-	free_stack(&b);
-
-	return (0);
+	result[i] = '\0';
+	return (result);
 }
