@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:55:01 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/17 13:17:16 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:27:49 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	push_swap(t_stack *a, t_stack *b)
 {
 	int	bits;
 	int	i;
-	int	sum;
 
 	if (a->size <= 5)
 	{
@@ -50,8 +49,6 @@ void	push_swap(t_stack *a, t_stack *b)
 		sort_bit(a, b, i);
 		i++;
 	}
-	sum = increment_move_count(0);
-	ft_printf("Total movements: %d\n", sum);
 }
 
 int	is_sorted(t_stack *stack)

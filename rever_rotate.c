@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:54:41 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/16 14:22:19 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:26:51 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	rra(t_stack *a)
 			i--;
 		}
 		a->values[0] = tmp;
-		increment_move_count(0);
 	}
 }
 
@@ -46,6 +45,5 @@ void	rrb(t_stack *b)
 			i--;
 		}
 		b->values[0] = tmp;
-		increment_move_count(0);
 	}
 }

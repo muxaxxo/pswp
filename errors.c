@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:53:58 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/17 13:18:21 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:27:59 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,4 @@ void	handle_error(void)
 {
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
-}
-
-int	increment_move_count(int reset)
-{
-	static int	count;
-
-	count = 0;
-	if (reset)
-		count = 0;
-	else
-		count++;
-	return (count);
 }

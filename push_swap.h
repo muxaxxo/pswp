@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:54:25 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/16 14:21:36 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:26:35 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	handle_error(void);
 void	sort_bit(t_stack *a, t_stack *b, int bit);
 void	free_stack(t_stack *stack);
 void	print_stack(t_stack *a, t_stack *b);
-int		increment_move_count(int reset);
 void	swap(t_stack *stack);
 void	push(t_stack *dst, t_stack *src);
 void	cleanup_and_exit(t_stack *a, t_stack *b, int code);
