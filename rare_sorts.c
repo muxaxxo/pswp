@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 13:04:14 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/17 13:04:46 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:18:13 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	sort_five(t_stack *a, t_stack *b)
 {
 	while (a->size > 3)
 	{
-		if (a->values[0] == get_min_value(a) 
+		if (a->values[0] == get_min_value(a)
 			|| a->values[0] == get_second_min_value(a))
 			pb(a, b);
 		else

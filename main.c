@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:41:03 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/16 13:01:41 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:18:28 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ void	cleanup_and_exit(t_stack *a, t_stack *b, int code)
 	free_stack(b);
 	exit(code);
 }
-

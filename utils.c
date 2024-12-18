@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:41:59 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/16 14:13:17 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:18:39 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	sort_bit(t_stack *a, t_stack *b, int bit)
 	while (b->size > 0)
 		pa(a, b);
 }
-
 
 void	free_stack(t_stack *stack)
 {

@@ -6,7 +6,7 @@
 /*   By: aalegria <aalegria@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:14:10 by aalegria          #+#    #+#             */
-/*   Updated: 2024/12/16 13:39:18 by aalegria         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:18:53 by aalegria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,3 @@ int	init_stacks(int argc, char **argv, t_stack *stack_a, t_stack *stack_b)
 	}
 	return (1);
 }
-
